@@ -99,3 +99,7 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# zip files
+app-20180217T010808Z-001.zip
+drive-download-20180217T010856Z-001.zip

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+<!-- expects current_user, post objects instantiated from pkg flask_login, Post -->
+{% block content %}
+	<h1>Hi, {{ current_user.username }}!</h1>
+	{% for post in posts %}
+	  <div><p>{{ post.author.username}} says: <b>{{ post.body}}</b></p></div>
+	{% endfor %}
+{% endblock %}
