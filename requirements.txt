@@ -1,0 +1,9 @@
+Werkzeug==0.14.1
+Flask==0.12.2
+alembic==0.9.8
+flask_login==0.4.1
+flask_migrate==2.1.1
+flask_sqlalchemy==2.3.2
+flask_wtf==0.14.2
+SQLAlchemy==1.2.3
+WTForms==2.1
