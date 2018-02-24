@@ -1,20 +1,4 @@
-2018-02-16 18:09:57,571 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:60]
-2018-02-17 11:57:57,215 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:60]
-2018-02-17 11:59:49,371 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:60]
-2018-02-17 12:12:01,446 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:60]
-2018-02-17 13:18:08,817 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:60]
-2018-02-17 13:18:21,499 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:60]
-2018-02-17 13:25:01,082 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:60]
-2018-02-17 13:26:01,316 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:60]
-2018-02-17 13:27:19,331 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:60]
-2018-02-17 13:31:11,178 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:60]
-2018-02-17 13:31:45,461 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:60]
-2018-02-17 13:34:34,093 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:60]
-2018-02-17 13:37:01,889 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:60]
-2018-02-17 14:01:40,880 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:60]
-2018-02-17 14:02:13,340 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:60]
-2018-02-17 14:02:27,472 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:60]
-2018-02-17 14:02:51,145 ERROR: Exception on /user/fred [GET] [in /home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+2018-02-17 14:05:49,899 ERROR: Exception on /user/fred [GET] [in /home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -73,3 +57,63 @@ Traceback (most recent call last):
   File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/jinja2/lexer.py", line 384, in expect
     self.name, self.filename)
 jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got 'current_user'
+2018-02-21 23:28:21,319 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:60]
+2018-02-21 23:40:31,063 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:60]
+2018-02-21 23:40:50,569 ERROR: Exception on /user/carlton [GET] [in /home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/seedub/pythonStuff/microblog/app/routes.py", line 81, in user
+    next_url = url_for('user', page=posts.next_num) if posts.has_next else None
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/helpers.py", line 333, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1805, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/helpers.py", line 323, in url_for
+    force_external=external)
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'user' with values ['page']. Did you forget to specify values ['username']?
+2018-02-21 23:44:48,140 ERROR: Exception on /user/carlton [GET] [in /home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/seedub/pythonStuff/microblog/app/routes.py", line 81, in user
+    prev_url = url_for('user', username=user.username, page=posts.prev_num) if posts.has_prev else None
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/helpers.py", line 333, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1805, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/helpers.py", line 323, in url_for
+    force_external=external)
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'user' with values ['page']. Did you forget to specify values ['username']?
