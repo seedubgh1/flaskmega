@@ -1,0 +1,15 @@
+update LANGUAGES variable in config.py, add language code
+
+update code with _() or _l() around text (good luck!)
+
+from the command line (project root) run 'flask translate init <language-code>'
+
+edit translation file in translations/<language-code>/LC_MESSAGES/messages.po
+  by manually adding translations for each sting extracted
+
+
+from the command line (project root) run 'flask translate update'
+from the command line (project root) run 'flask translate compile'
+
+
+to test, modify function get_locale to return the subject language code, then run application

@@ -15,3 +15,5 @@ class Config(object):
 	ADMIN_EMAILS = ['carltonsaddress@hotmail.com']
 
 	POSTS_PER_PAGE = 25
+
+	LANGUAGES = ['en','es','fr']
