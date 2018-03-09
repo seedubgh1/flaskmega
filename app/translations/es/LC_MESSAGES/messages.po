@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-03 01:40-0800\n"
+"POT-Creation-Date: 2018-03-09 15:30-0800\n"
 "PO-Revision-Date: 2018-03-03 01:17-0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -50,7 +50,7 @@ msgstr "Email"
 msgid "Repeat Password"
 msgstr "Repetir Contraseña"
 
-#: app/forms.py:18 app/routes.py:74
+#: app/forms.py:18 app/routes.py:79
 msgid "Register"
 msgstr "Registrarse"
 
@@ -84,69 +84,70 @@ msgstr "Di algo (cualquier cosa)"
 msgid "Request Password Reset"
 msgstr "Pedir una nueva contraseña"
 
-#: app/routes.py:29
+#: app/routes.py:34
 msgid "Your post is now live"
 msgstr ""
 
-#: app/routes.py:37
+#: app/routes.py:42
 msgid "Home Page"
 msgstr "Página de inicio"
 
-#: app/routes.py:48
+#: app/routes.py:53
 msgid "Invalid username or password"
 msgstr "Nombre de usuario o contraseña inválidos"
 
-#: app/routes.py:55
+#: app/routes.py:60
 msgid "Sign In Page"
 msgstr ""
 
-#: app/routes.py:72
+#: app/routes.py:77
 msgid "Congratulations, you are a registered user!"
 msgstr ""
 
-#: app/routes.py:97
+#: app/routes.py:102
 msgid "Your changes have been saved."
 msgstr ""
 
-#: app/routes.py:102
+#: app/routes.py:107
 msgid "Edit Profile"
 msgstr ""
 
-#: app/routes.py:109 app/routes.py:124
+#: app/routes.py:114 app/routes.py:129
 #, python-format
 msgid "User %(username)s not found."
 msgstr ""
 
-#: app/routes.py:112
+#: app/routes.py:117
 msgid "You cannot follow yourself!"
 msgstr ""
 
-#: app/routes.py:116
+#: app/routes.py:121
 #, python-format
 msgid "Your are following %(username)s!"
 msgstr ""
 
-#: app/routes.py:127
+#: app/routes.py:132
 msgid "You cannot unfollow yourself!"
 msgstr ""
 
-#: app/routes.py:131
+#: app/routes.py:136
 #, python-format
 msgid "You are not following %(username)s."
 msgstr ""
 
-#: app/routes.py:143
+#: app/routes.py:148
 msgid "Explore"
 msgstr "Explorar"
 
-#: app/routes.py:155
+#: app/routes.py:160
 msgid "Check your email for the instructions to reset your password"
 msgstr ""
 
-#: app/routes.py:158
+#: app/routes.py:163
 msgid "Reset Password"
 msgstr ""
 
-#: app/routes.py:171
+#: app/routes.py:176
 msgid "Your password has been reset"
 msgstr ""
+
