@@ -1,70 +1,4 @@
-2018-02-21 23:46:34,975 ERROR: Exception on /user/carlton [GET] [in /home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
-    raise value
-  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/seedub/pythonStuff/microblog/app/routes.py", line 81, in user
-    prev_url = url_for('user', username=user.username, page=posts.prev_num) if posts.has_prev else None
-  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/helpers.py", line 333, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1805, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
-    raise value
-  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/helpers.py", line 323, in url_for
-    force_external=external)
-  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/werkzeug/routing.py", line 1776, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'user' with values ['page']. Did you forget to specify values ['username']?
-2018-02-21 23:46:40,534 ERROR: Exception on /user/carlton [GET] [in /home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
-    raise value
-  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/seedub/pythonStuff/microblog/app/routes.py", line 81, in user
-    prev_url = url_for('user', username=user.username, page=posts.prev_num) if posts.has_prev else None
-  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/helpers.py", line 333, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1805, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
-    raise value
-  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/helpers.py", line 323, in url_for
-    force_external=external)
-  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/werkzeug/routing.py", line 1776, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'user' with values ['page']. Did you forget to specify values ['username']?
-2018-02-21 23:46:53,754 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:60]
-2018-02-21 23:52:02,493 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:60]
-2018-02-24 00:21:48,621 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:62]
-2018-02-24 00:22:23,352 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:62]
-2018-02-24 00:22:57,857 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:62]
-2018-02-24 00:23:30,725 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:62]
-2018-02-24 00:23:43,188 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:62]
-2018-02-24 00:26:53,653 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:62]
-2018-02-24 00:27:25,375 ERROR: Exception on /reset_password_request [GET] [in /home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+2018-02-24 00:28:45,208 ERROR: Exception on /reset_password_request [GET] [in /home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -95,7 +29,67 @@ Traceback (most recent call last):
   File "/home/seedub/pythonStuff/microblog/app/templates/base.html", line 30, in top-level template code
     {% block content %}{% endblock %}
   File "/home/seedub/pythonStuff/microblog/app/templates/reset_password_request.html", line 14, in block "content"
-    <p>{{ forms.submit() }}</p>
+    <p>{{ form.submit() }}</p>
   File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 430, in getattr
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'forms' is undefined
+2018-02-24 00:29:10,664 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:62]
+2018-02-24 00:29:29,307 ERROR: Exception on /reset_password_request [POST] [in /home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/seedub/pythonStuff/microblog/app/routes.py", line 152, in reset_password_request
+    send_password_reset_email(user)
+  File "/home/seedub/pythonStuff/microblog/app/email.py", line 19, in send_password_reset_email
+    sender=app.config['ADMIN_EMAILS'][0],
+NameError: name 'app' is not defined
+2018-02-24 00:32:09,152 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:62]
+2018-02-24 00:39:34,674 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:62]
+2018-02-24 00:40:49,586 ERROR: Exception on /reset_password/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6MiwiZXhwIjoxNTE5NDYyMTgzLjE1ODgyODV9.PmdiGazxoebczSCP9Go5B3MzMP_Y3uQ5cgOGyUFuF58 [GET] [in /home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/seedub/pythonStuff/microblog/app/routes.py", line 162, in reset_password
+    user = User.verify_reset_password_token(token)
+  File "/home/seedub/pythonStuff/microblog/app/models.py", line 81, in verify_reset_password_token
+    return user.query.get(id)
+NameError: name 'user' is not defined
+2018-02-24 00:42:22,796 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:62]
+2018-02-24 00:42:29,772 ERROR: Exception on /reset_password/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6MiwiZXhwIjoxNTE5NDYyMTgzLjE1ODgyODV9.PmdiGazxoebczSCP9Go5B3MzMP_Y3uQ5cgOGyUFuF58 [GET] [in /home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/seedub/pythonStuff/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/seedub/pythonStuff/microblog/app/routes.py", line 165, in reset_password
+    form = ResetPasswordform()
+NameError: name 'ResetPasswordform' is not defined
+2018-02-24 00:44:47,816 INFO: Microblog startup [in /home/seedub/pythonStuff/microblog/app/__init__.py:62]
