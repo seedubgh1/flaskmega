@@ -19,7 +19,7 @@ login.login_message = _l('Please log in to access this page')
 mail = Mail()
 bootstrap = Bootstrap()
 moment = Moment()
-babel = Babel(app)
+babel = Babel()
 
 def create_app(config_class=Config):
 	app = Flask(__name__)
@@ -28,7 +28,7 @@ def create_app(config_class=Config):
 	migrate.init_app(app)
 	login.init_app(app)
 	mail.init_app(app)
-	boostrap.init_app(app)
+	bootstrap.init_app(app)
 	moment.init_app(app)
 	babel.init_app(app)
 
