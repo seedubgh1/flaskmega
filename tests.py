@@ -1,4 +1,4 @@
-#!usr/bin/env python
+#!/usr/bin/env python
 from datetime import datetime, timedelta
 import unittest
 from app import create_app, db
@@ -34,8 +34,8 @@ class UserModelCase(unittest.TestCase):
                                          '?d=identicon&s=128'))
 
     def test_follow(self):
-        u1 = User(username='john',email='john@example.com')
-        u2 = User(username='susan',email='susan@example.com')
+        u1 = User(username='john', email='john@example.com')
+        u2 = User(username='susan', email='susan@example.com')
         db.session.add(u1)
         db.session.add(u2)
         db.session.commit()
@@ -57,14 +57,14 @@ class UserModelCase(unittest.TestCase):
         self.assertEqual(u2.followers.count(), 0)
 
     def test_follow_posts(self):
-        # create 4 users
+        # create four users
         u1 = User(username='john', email='john@example.com')
         u2 = User(username='susan', email='susan@example.com')
         u3 = User(username='mary', email='mary@example.com')
         u4 = User(username='david', email='david@example.com')
         db.session.add_all([u1, u2, u3, u4])
 
-        # create 4 posts
+        # create four posts
         now = datetime.utcnow()
         p1 = Post(body="post from john", author=u1,
             timestamp=now + timedelta(seconds=1))
@@ -78,13 +78,13 @@ class UserModelCase(unittest.TestCase):
         db.session.commit()
 
         # setup the followers
-        u1.follow(u2) # john follows susan
-        u1.follow(u4) # john follows david
-        u2.follow(u3) # susan follows mary
-        u3.follow(u4) # mary follows david
+        u1.follow(u2)  # john follows susan
+        u1.follow(u4)  # john follows david
+        u2.follow(u3)  # susan follows mary
+        u3.follow(u4)  # mary follows david
         db.session.commit()
 
-        # check fikt followed posts of each user
+        # check the followed posts of each user
         f1 = u1.followed_posts().all()
         f2 = u2.followed_posts().all()
         f3 = u3.followed_posts().all()
