@@ -25,7 +25,7 @@ def create_app(config_class=Config):
 	app = Flask(__name__)
 	app.config.from_object(Config)
 	db.init_app(app)
-	migrate.init_app(app)
+	migrate.init_app(app, db)
 	login.init_app(app)
 	mail.init_app(app)
 	bootstrap.init_app(app)
@@ -40,6 +40,9 @@ def create_app(config_class=Config):
 
 	from app.main import bp as main_bp
 	app.register_blueprint(main_bp)
+
+	from app.api import bp as api_bp
+	app.register_blueprint(api_bp, url_prefix='/api')
 
 	#### EMAIL SERVER PARAMS - CONFIGURE THESE AS ENVIRONMENT VARS (dotenv) ####
 	mailserver = app.config['MAIL_SERVER']

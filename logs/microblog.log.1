@@ -1,0 +1,106 @@
+2019-02-20 19:42:58,350 INFO: Microblog startup [in /home/whitecx/pythonStuff/microblog/app/__init__.py:90]
+2019-02-20 19:43:13,652 ERROR: Exception on /api/users/1 [GET] [in /home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/whitecx/pythonStuff/microblog/app/api/users.py", line 7, in get_user
+    return jsonify(User.query.get_or_404(id).to_dict())
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask_sqlalchemy/__init__.py", line 417, in get_or_404
+    rv = self.get(ident)
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 871, in get
+    ident, loading.load_on_ident)
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 905, in _get_impl
+    return fallback_fn(self, key)
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/sqlalchemy/orm/loading.py", line 231, in load_on_ident
+    return q.one()
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 2837, in one
+    ret = self.one_or_none()
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 2807, in one_or_none
+    ret = list(self)
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 2878, in __iter__
+    return self._execute_and_instances(context)
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 2901, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
+    context)
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 186, in reraise
+    raise value.with_traceback(tb)
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user [SQL: 'SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen \nFROM user \nWHERE user.id = ?'] [parameters: (1,)] (Background on this error at: http://sqlalche.me/e/e3q8)
+2019-02-20 19:43:38,224 INFO: Microblog startup [in /home/whitecx/pythonStuff/microblog/app/__init__.py:90]
+2019-02-20 19:43:55,375 INFO: Microblog startup [in /home/whitecx/pythonStuff/microblog/app/__init__.py:90]
+2019-02-20 19:44:05,298 INFO: Microblog startup [in /home/whitecx/pythonStuff/microblog/app/__init__.py:90]
+2019-02-20 19:45:15,532 ERROR: Exception on /api/users/1 [GET] [in /home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/whitecx/pythonStuff/microblog/app/api/users.py", line 7, in get_user
+    return jsonify(User.query.get_or_404(id).to_dict())
+  File "/home/whitecx/pythonStuff/microblog/app/models.py", line 106, in to_dict
+    'self': url_for('api.get_user', id=self.id),
+NameError: name 'url_for' is not defined
+2019-02-20 19:46:14,681 ERROR: Exception on /api/users [GET] [in /home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1615, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1630, in finalize_request
+    response = self.make_response(rv)
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1725, in make_response
+    raise ValueError('View function did not return a response')
+ValueError: View function did not return a response
+2019-02-20 19:51:19,424 INFO: Microblog startup [in /home/whitecx/pythonStuff/microblog/app/__init__.py:90]
+2019-02-20 19:53:20,551 ERROR: Exception on /api/users [GET] [in /home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1615, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1630, in finalize_request
+    response = self.make_response(rv)
+  File "/home/whitecx/pythonStuff/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1725, in make_response
+    raise ValueError('View function did not return a response')
+ValueError: View function did not return a response
