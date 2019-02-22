@@ -98,7 +98,7 @@ class User(PaginatedAPIMixin, UserMixin, db.Model):
 			'id': self.id,
 			'username': self.username,
 			'last_seen': self.last_seen.isoformat() + 'Z',
-			'aboutn_me': self.about_me,
+			'about_me': self.about_me,
 			'post_count': self.posts.count(),
 			'follower_count': self.followers.count(),
 			'followed_count': self.followed.count(),
@@ -114,8 +114,9 @@ class User(PaginatedAPIMixin, UserMixin, db.Model):
 		return data
 
 	def from_dict(self, data, new_user=False):
-		if field in data:
-			setattr(self, field, data[field])
+		for field in ['username', 'email', 'about_me']:
+			if field in data:
+				setattr(self, field, data[field])
 		if new_user and 'password' in data:
 			self.set_password(data['password'])
 
